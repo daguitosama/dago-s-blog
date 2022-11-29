@@ -1,8 +1,44 @@
+---
+title: Making my own pronunciation app (kind of)
+description: The story of how i made my own pronunciation assistant app
+head : 
+    meta: 
+        - property: 'og:title'
+          content: "Making my own pronunciation app (kind of)"
+        - property: 'og:description'
+          content: 'Dago A Carralero Personal Blog'
+        - property: 'og:image'
+          content: 'https://localhost/img/social.jpg'
+        - property: 'og:site_name'
+          content: "Dago's Blog"
+        - property: 'og:url'
+          content: 'https//localhost/'
+        - property: 'twitter:card'
+          content: 'summary_large_image'
+        - property: 'twitter:title'
+          content: "Making my own pronunciation app (kind of)"
+        - property: 'twitter:image'
+          content: 'https://localhost/social.jpg'
+
+---
+
 # Making my own pronunciation app (kind of)
 
-```md tags
-craft, curiosity, bash
-```
+::date_and_tags
+---
+date: "29 Nov 2022"
+tags: ['craft', 'curiosity', 'bash']
+---
+::
+
+
+
+::youtube-video
+---
+videoId: 9TNrvH_OzCY
+---
+::
+
 I recently decided to deep dive into English, my first language is Español. I am comfortable reading stuff and talking to people, but I feel a strong need to get more effective at communicating with others (future Dago included) and to give more reel to the machine to operate with.
 
 I have been looking up a quick way to learn new English words, not just their meaning, but actually how to spell them. I came across the nice Mate app, a little translator app that lives in your menu bar, is convenient, (hard to remember) but has its own global keyboard shortcut. I mean, it's a very good app, but it's not exactly my ideal use case, I need to copy the word, put it on the box, hit the spell button, which then hits the wire, and a few milliseconds later you have a good pronunciation, that's way too many steps and context-switching for this human, this human knows people can do magic with a few bash spells.
@@ -29,7 +65,7 @@ Now with my awesome personal English pronunciation assistant, I decided to go fo
 
 Spotlight is always there, it doesn't care if you are using another app full screen at all, I find myself typing at the best GitHub command-pallette-style the following: `terminal > sam_tell_me "savory"` but yeah that doesn't work, but hey, that was the realization! I didn't find any way to accomplish that task on the Spotlight but a nice flashback came across, a sentence of Scott on the Syntax Podcast, an [episode](https://syntax.fm/show/511/supper-club-raycast-with-thomas-mann) about [Raycast](https://www.raycast.com), "a modern Alfred kind of thing", Scott said something like: 
 
->"Hey man, in 5 minutes I was making my own custom plugin to fetch stuff" 
+> Hey man, in 5 minutes I was making my own custom plugin to fetch stuff
 
 I took it from there!
 

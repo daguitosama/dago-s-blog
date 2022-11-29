@@ -33,3 +33,13 @@
     font-named-instance: 'Italic';
     font-style: italic;
 }
+
+
+@font-face {
+    font-family: 'Fira Code VF';
+    src: url('/fonts/FiraCode-VF.woff2') format('woff2');
+    font-weight: 300 700;
+    font-display: swap;
+    font-named-instance: 'Regular';
+    font-style: normal;
+}

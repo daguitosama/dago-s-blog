@@ -30,50 +30,52 @@ function onError(error) {
 </script>
 <template>
     <div>
-        <Html
-            :lang="head.htmlAttrs.lang"
-            :dir="head.htmlAttrs.dir"
-        >
-            <NuxtErrorBoundary @error="onError">
-                <Head>
-                    <!-- i18n metadata -->
-                    <template
-                        v-for="link in head.link"
-                        :key="link.id"
-                    >
-                        <Link
-                            :id="link.id"
-                            :rel="link.rel"
-                            :href="link.href"
-                            :hreflang="link.hreflang"
-                        />
-                    </template>
-                    <template
-                        v-for="meta in head.meta"
-                        :key="meta.id"
-                    >
-                        <Meta
-                            :id="meta.id"
-                            :property="meta.property"
-                            :content="meta.content"
-                        />
-                    </template>
+        <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+        <NuxtErrorBoundary @error="onError">
 
-                    <Meta
-                        property="twitter:site"
-                        :content="twitterSite"
-                    />
-                </Head>
+            <Head>
+                <!-- i18n metadata -->
+                <template v-for="link in head.link" :key="link.id">
+                    <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
+                </template>
+                <template v-for="meta in head.meta" :key="meta.id">
+                    <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
+                </template>
 
-                <Body class="antialiased transition-all duration-300">
-                    <p class="w-full p-4 text-3xl bg-slate-300">
-                        Foo from the layout
-                    </p>
-                    <main>
-                        <ContentDoc />
-                    </main>
-                </Body>
-            </NuxtErrorBoundary>
+                <Meta property="twitter:site" :content="twitterSite" />
+            </Head>
+
+            <Body class="antialiased transition-all duration-300">
+
+                <!-- nav -->
+                <div class="h-[80px] w-full">
+                    <header>
+                        <nav>
+
+                        </nav>
+                    </header>
+                </div>
+
+                <main class="
+                            
+                            max-w-2xl mx-auto
+                            prose prose-stone prose-lg
+                            prose-blue
+                            prose-h1:text-3xl
+                            md:prose-h1:text-5xl md:prose-h1:leading-tight
+                            prose-headings:mx-[30px] prose-headings:font-bespoke
+                            prose-p:mx-[30px] 
+                            
+                            prose-pre:bg-slate-100
+                            prose-pre:rounded-none sm:prose-pre:rounded-xl
+
+                            prose-blockquote:mx-[30px]
+                        ">
+                    <ContentDoc />
+                </main>
+            </Body>
+        </NuxtErrorBoundary>
+
         </Html>
     </div>
 </template>
