@@ -1,42 +1,27 @@
-# Content v2 Minimal Starter
+# Dago's Blog
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+## Content Types
+```graphql
 
-## Setup
+    enum Tags {
+        curiosity 
+        craft
+        bash
+    }
 
-Make sure to install the dependencies:
+    Post {
+        tittle           String
+        description     String
+        featureImage    String
+        tags            Tags[]
+        content         String
 
-```bash
-# yarn
-yarn install
+    }
 
-# npm
-npm install
+    Page {
+        tittle           String
+        description     String
+        featureImage    String
+    }
 
-# pnpm
-pnpm install --shamefully-hoist
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
