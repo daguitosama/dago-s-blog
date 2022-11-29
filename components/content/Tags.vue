@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="not-prose  font-mono text-primary-on-light-base">
+    <div class="not-prose  font-mono text-primary-on-light-base dark:text-primary-on-dark-base">
         <ul class="flex gap-2 items-center">
             <li v-for="tag, index in tags" :key="index">
                 <span class="">

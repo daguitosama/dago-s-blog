@@ -10,6 +10,6 @@ const props = defineProps({
 
 <template>
     <div class="not-prose font-mono ">
-        <span>{{ date }}</span>
+        <span class="text-stone-900 dark:text-white">{{ date }}</span>
     </div>
 </template>

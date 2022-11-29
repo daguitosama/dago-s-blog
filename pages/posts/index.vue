@@ -56,26 +56,19 @@ function onError(error) {
                 <main class="
                             
                             max-w-2xl mx-auto
-                            prose prose-lg dark:prose-invert
-                            prose-blue
+                            
 
                             prose-headings:mx-[30px] prose-headings:font-bespoke 
                             
                             prose-h1:text-4xl
                             md:prose-h1:text-5xl md:prose-h1:leading-tight
                             
-
                             prose-p:mx-[30px] 
                             
-                            prose-pre:bg-slate-100
-                            dark:prose-pre:bg-zinc-900
-                            prose-pre:rounded-none sm:prose-pre:rounded-xl
-
-                            prose-blockquote:mx-[30px]
                         ">
-                    <ContentDoc />
-                </main>
 
+                    <h1 class="text-4xl sm:text-5xl font-extrabold">Posts</h1>
+                </main>
                 <TheFooter />
             </Body>
         </NuxtErrorBoundary>

@@ -60,6 +60,7 @@ module.exports = {
                         "h1 a, h2 a, h3 a, h4 a ": {
                             color: "var(--tw-prose-headings)",
                             textDecoration: "none",
+                            "font-weight": "600",
                         },
 
                         // ...
