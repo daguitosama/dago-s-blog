@@ -11,8 +11,6 @@ head :
           content: 'https://localhost/img/social.jpg'
         - property: 'og:site_name'
           content: "Dago's Blog"
-        - property: 'og:url'
-          content: 'https//localhost/'
         - property: 'twitter:card'
           content: 'summary_large_image'
         - property: 'twitter:title'

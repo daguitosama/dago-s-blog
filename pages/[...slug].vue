@@ -41,7 +41,7 @@ function onError(error) {
                 <template v-for="meta in head.meta" :key="meta.id">
                     <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
                 </template>
-
+                <Meta property="og:url" :content="canonical" />
                 <Meta property="twitter:site" :content="twitterSite" />
             </Head>
 
