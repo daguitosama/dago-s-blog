@@ -47,7 +47,7 @@ I have been looking up a quick way to learn new English words, not just their me
 
 After a very productive duckduckgo session, I came across the Apple Speech Synthesis Manager, aka the `say` command. It gives you access to all those languages that Voice Over uses, looks like there are not just new emojis in those 12 GB updates after all.
 
-Next step was to craft the spell:
+The next step was to craft the spell:
 ```bash
  # there is a bunch of voices & lang choices
  # Samantha it's my personal favorite
