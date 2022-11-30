@@ -16,8 +16,6 @@ const canonical = computed(
     () => head.value?.link.filter((link) => link.rel == "canonical")[0].href
 );
 
-// Page Metadata
-const content = useContent();
 
 // Fixed Metadata Values
 const {
@@ -44,7 +42,22 @@ function onError(error) {
                 <template v-for="meta in head.meta" :key="meta.id">
                     <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
                 </template>
+
+                <!-- page metadata -->
+                <!-- base -->
+                <Title> Posts | Dago's Blog</Title>
+                <Meta name="description" content="Dago's Blog Posts" />
+                <!-- OG -->
+                <Meta property="og:title" content="Posts" />
+                <Meta property="og:description" content="Dago's Blog Posts" />
+                <Meta property="og:image" content="https://dago-s-blog.pages.dev/img/social.jpg" />
+                <Meta property="og:site_name" :content="siteName" />
+                <!-- use canonical -->
                 <Meta property="og:url" :content="canonical" />
+                <!-- Twitter -->
+                <Meta property="twitter:card" content="summary_large_image" />
+                <Meta property="twitter:title" content="Posts" />
+                <Meta property="twitter:image" content="https://dago-s-blog.pages.dev/img/social.jpg" />
                 <Meta property="twitter:site" :content="twitterSite" />
             </Head>
 

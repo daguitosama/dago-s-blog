@@ -16,8 +16,9 @@ const canonical = computed(
     () => head.value?.link.filter((link) => link.rel == "canonical")[0].href
 );
 
-// Page Metadata
-const content = useContent();
+// console.log({ canonical: canonical.value })
+
+
 
 // Fixed Metadata Values
 const {

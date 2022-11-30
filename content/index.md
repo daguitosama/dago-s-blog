@@ -8,17 +8,15 @@ head :
         - property: 'og:description'
           content: 'Dago A Carralero Personal Blog'
         - property: 'og:image'
-          content: 'https://localhost/img/social.jpg'
+          content: 'https://dago-s-blog.pages.dev/img/social.jpg'
         - property: 'og:site_name'
           content: "Dago's Blog"
-        - property: 'og:url'
-          content: 'https//localhost/'
         - property: 'twitter:card'
           content: 'summary_large_image'
         - property: 'twitter:title'
           content: "Dago's Blog"
         - property: 'twitter:image'
-          content: 'https://localhost/social.jpg'
+          content: 'https://dago-s-blog.pages.dev/img/social.jpg'
 
 ---
 
