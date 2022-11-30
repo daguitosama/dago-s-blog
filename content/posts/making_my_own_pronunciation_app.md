@@ -12,7 +12,7 @@ head :
         - property: 'og:description'
           content: 'Dago A Carralero Personal Blog'
         - property: 'og:image'
-          content: 'https://localhost/img/social.jpg'
+          content: 'https://dago-s-blog.pages.dev/img/social.jpg'
         - property: 'og:site_name'
           content: "Dago's Blog"
         - property: 'twitter:card'
@@ -20,7 +20,7 @@ head :
         - property: 'twitter:title'
           content: "Making my own pronunciation app (kind of)"
         - property: 'twitter:image'
-          content: 'https://localhost/social.jpg'
+          content: 'https://dago-s-blog.pages.dev/img/social.jpg'
 
 ---
 
