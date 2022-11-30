@@ -1,6 +1,10 @@
 ---
+draft: false
 title: Making my own pronunciation app (kind of)
 description: The story of how i made my own pronunciation assistant app
+is_feedable: true
+uuid: 7f0821d9-4e65-46c4-996a-fe4a275477b6
+date: Wed Nov 30 00:25:49 CST 2022
 head : 
     meta: 
         - property: 'og:title'

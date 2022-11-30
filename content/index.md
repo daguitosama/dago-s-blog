@@ -25,16 +25,9 @@ head :
 
 # Dago's Blog
 
+Hi Im Dago, i do freelance web design and development. This blog is under active development. The two main reasons i made it is to **share** and **keep track** of the **things i learn**, so maybe you will find it useful too.
 
+While I craft some stuff I will live you with this tip: if some time you visit the Havana, check out La Quinta de los Molinos, look how Carmen likes it.
 
-<!-- 
-## Pronunciation App Demo
-::youtube-video
----
-videoId: 9TNrvH_OzCY
----
-:: -->
-
-
-[A simple and quick way to listen how to pronounce words. No context switching required.](https://youtu.be/9TNrvH_OzCY)
+![A lovely dog sleeping in a beautiful park](/img/carmen-en-la-quinta.jpeg){.rounded-xl}
 

@@ -63,9 +63,15 @@ export default defineNuxtConfig({
             process.env.CONTENT_VERSION_SELECTOR_PASSWORD || "supper-foo-pass",
     },
 
-    // postcss: {
-    //     plugins: {
-    //         tailwindcss: {},
-    //     },
-    // },
+    app: {
+        head: {
+            link: [
+                {
+                    rel: "shortcut icon",
+                    href: "/favicon.ico",
+                },
+            ],
+        },
+        pageTransition: { name: "page", mode: "out-in" },
+    },
 });

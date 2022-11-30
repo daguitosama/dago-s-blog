@@ -27,6 +27,9 @@ const {
 function onError(error) {
     console.error(error);
 }
+
+
+
 </script>
 <template>
     <div>
@@ -46,7 +49,7 @@ function onError(error) {
             </Head>
 
             <Body
-                class="antialiased transition-all duration-300 bg-white dark:bg-zinc-800 text-stone-900 dark:text-white">
+                class="antialiased transition-all duration-300 bg-white dark:bg-[#131D26] text-stone-900 dark:text-white">
 
                 <!-- nav -->
                 <div class=" w-full mb-[40px]">
@@ -56,7 +59,6 @@ function onError(error) {
                 <main class="
                             
                             max-w-2xl mx-auto
-                            
 
                             prose-headings:mx-[30px] prose-headings:font-bespoke 
                             
@@ -68,6 +70,9 @@ function onError(error) {
                         ">
 
                     <h1 class="text-4xl sm:text-5xl font-extrabold">Posts</h1>
+
+                    <PostList class="mt-[40px]" />
+
                 </main>
                 <TheFooter />
             </Body>

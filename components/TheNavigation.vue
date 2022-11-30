@@ -1,18 +1,5 @@
 <script setup>
-const navItems = [
-    {
-        text: 'Posts',
-        route: '/posts'
-    },
-    {
-        text: 'Tags',
-        route: '/tags'
-    },
-    {
-        text: 'About',
-        route: '/about'
-    },
-]
+import { mainNavigationLinks } from '~/db'
 
 </script>
 
@@ -28,7 +15,7 @@ const navItems = [
             </div>
             <div class="ml-[20px] sm:ml-[45px]">
                 <ul class="flex items-baseline justify-between gap-2">
-                    <li v-for="item, index in navItems" :key="index">
+                    <li v-for="item, index in mainNavigationLinks" :key="index">
                         <NuxtLink class="font-text-sm font-bold" :to="localePath(item.route)">
                             {{ item.text }}
                         </NuxtLink>

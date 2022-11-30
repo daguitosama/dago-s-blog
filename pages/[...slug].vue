@@ -46,7 +46,7 @@ function onError(error) {
             </Head>
 
             <Body
-                class="antialiased transition-all duration-300 bg-white dark:bg-zinc-800 text-stone-900 dark:text-white">
+                class="antialiased transition-all duration-300 bg-white dark:bg-[#131D26] text-stone-900 dark:text-white">
 
                 <!-- nav -->
                 <div class=" w-full mb-[40px]">
@@ -68,7 +68,7 @@ function onError(error) {
                             prose-p:mx-[30px] 
                             
                             prose-pre:bg-slate-100
-                            dark:prose-pre:bg-zinc-900
+                            dark:prose-pre:bg-black
                             prose-pre:rounded-none sm:prose-pre:rounded-xl
 
                             prose-blockquote:mx-[30px]
