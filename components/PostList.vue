@@ -6,9 +6,9 @@ const props = defineProps({
 
 // content
 // published post quer
-// const posts = await queryContent('posts').where({ draft: false }).find();
+const posts = await queryContent('posts').where({ draft: false }).find();
 // all posts query
-const posts = await queryContent('posts').find();
+// const posts = await queryContent('posts').find();
 // console.log(Object.entries(posts[0]))
 
 // date

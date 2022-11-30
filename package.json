@@ -3,8 +3,9 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "NODE_ENV=production nuxt generate",
     "preview": "nuxt preview",
+    "prewview:st": "NODE_ENV=production nuxt generate && serve .output/public/ -p 3000",
     "preview:cfw": "NITRO_PRESET=cloudflare pnpm build && wrangler dev --local --port 3000"
   },
   "devDependencies": {

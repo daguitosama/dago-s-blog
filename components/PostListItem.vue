@@ -15,22 +15,23 @@ const props = defineProps({
         default: (date) => 'formatedDate'
     }
 })
-// const localizedDate = computed(() => formatDate(props.post.date))
 
 </script>
 
 <template>
     <div class="not-prose border-b border-slate-200 dark:border-zinc-500 px-[30px] py-[40px] ">
 
+        <div>
+            <time :datetime="post.date" class="font-medium font-mono text-sm"> {{ dateFormater(post.date) }} </time>
+        </div>
+
         <NuxtLink :to="post._path"
-            class="inline-block hover:underline hover:text-primary-on-light-base dark:hover:text-primary-on-dark-base cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black ">
+            class="mt-4 inline-block hover:underline hover:text-primary-on-light-base dark:hover:text-primary-on-dark-base cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black ">
             <h2 class="font-bespoke font-bold text-2xl">
                 {{ post.title }}
             </h2>
         </NuxtLink>
-        <div class="mt-4">
-            <time :datetime="post.date" class="font-medium font-mono text-sm"> {{ dateFormater(post.date) }} </time>
-        </div>
+
         <div class="mt-4">
             <NuxtLink :to="post._path"
                 class=" inline-block border-b-2 border-b-slate-500  hover:text-primary-on-light-base dark:hover:text-primary-on-dark-base cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black ">
