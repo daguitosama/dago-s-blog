@@ -14,4 +14,8 @@
   opacity: 0;
   /* filter: blur(1rem); */
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 </style>
