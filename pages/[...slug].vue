@@ -70,6 +70,7 @@ function onError(error) {
                             
                             prose-pre:bg-slate-100
                             dark:prose-pre:bg-black
+                            
                             prose-pre:rounded-none sm:prose-pre:rounded-xl
 
                             prose-blockquote:mx-[30px]
