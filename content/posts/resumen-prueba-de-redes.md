@@ -35,9 +35,11 @@ tags: ['redes']
 
 
 ## Objetivos 
-- Enrrutmiento
-- Elementos de configuration basica de euipamiento
-- VLAN numeradas
+
+- Desarrollar algoritmos de enrutamiento basados en problemas planteados, algoritmo estado de enlace y vector distancia.
+- Caracterizar el protocolo RIP y OSPF.
+- Configurar de manera básica equipamiento de red Cisco.
+- Configurar Vlan en equipamiento de red Cisco, switches y routers.
 
 
 ## Vlan
@@ -73,46 +75,74 @@ $ exit
 
 #### Definir una vlan
 ```bash
-$ vlan 10 # 10 es el numero de la vlan
-$ name foo
+Switch> enable
+Switch# configure terminal 
+Switch(config)# vlan 20
+Switch(config-vlan)# name sala
+# save
+Switch(config-vlan)# do write
 ```
 
 #### Addicionar interfaces en rango
 ```bash
-$ interface range fastEthernet 0/2 - fastEthernet 0/10
-$ switchport access vlan 10
+Switch(config)# int range Fa0/2 - Fa0/12
+Switch(config-if-range)# switchport access vlan 20
+Switch(config-if-range)# do write
 ```
 
 #### Cambiar configuración de la interfaz
 ```bash
-$ interface fastEthernet 0/2
-
-$ speed 100
-
-$ duplex full 
-# o 
-$ duplex half
+Switch(config-if-range)# int Fa0/10
+Switch(config-if)# speed auto
+Switch(config-if)# duplex full
+Switch(config-if)# duplex half 
 ```
 
-#### Salvar
-```bash
-$ do write 
-```
 
-#### Ver config from modo privilegiado
-```bash
-$ show running-config
-```
 
 #### Ver vlan
 ```bash
 $ show vlan
 $ show 
 ```
+
+
+
+#### Ver config  (modo privilegiado)
+```bash
+Switch>enable
+Switch#show running-config 
+```
+
+#### Asignar Ip a una interfaz
+```bash
+Router> enable
+Router# configure terminal
+Router(config)# interface GigabitEthernet 0/0
+Router(config-if)# ip address 192.168.4.1 255.255.255.0
+# saves changes
+Router(config-if)# end 
+
+```
+
+
+#### Salvar
+```bash
+$ do write 
+```
  
 
 
 
+## Protocolos
+
+| Protocolo                  | RIP                  | OSPF             |
+| -------------------------- | -------------------- | ---------------- |
+| Algoritmo                  | Vector distancia     | Estado de enlace |
+| Como actualiza los estados | Mediante los vecinos | Ruta mínima      |
 
 
 
+###  RIP
+
+### OSPF
