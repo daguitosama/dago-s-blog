@@ -140,18 +140,7 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 ```
-with:
-```bash
-define('AUTH_KEY',         'g>=dH56`]uQW<v pY8B|0bMcS8P;<^UV-yZ^dT;X-E|(t1034MoL:#@T*[ .B&R<');
-define('SECURE_AUTH_KEY',  'G}Z-g|-wvE&D]DJ/-;:J]YV`}0(Nf!(-Z|d`c$Gegss[.27%_~PK{YGF}@L}7+-O');
-define('LOGGED_IN_KEY',    'rNgY~A.-2,$5E/uj&v8+.jlwFOB@v^-;R]:Ar@f`ww(,{b<Rf>.O~<=?h0s6-`{_');
-define('NONCE_KEY',        'b?GfKtAvrK?{,|9}RO~)aB~+~hyU.)jsBVg6A8*`t[!{E=j=XY} e)bmtTEWm8sR');
-define('AUTH_SALT',        'BKfv0z-;JQt%!8C}Genci;SsRT{/(<yC`&tJg{FVPgppo#qeRa3G5qZ(MnbhEb^{');
-define('SECURE_AUTH_SALT', '&8A@{5hn|g2`=+egU#}[f2ve<@5oiFHT+TeWLyb`1EVM9_THq3hk&pOQ<s5<LCs@');
-define('LOGGED_IN_SALT',   '$~x(|;|Gj-Hqo{<g00<oj$P_@7x%`I|T[RCj<B/ Mw]%FSD@N?5Flwf]tJpwil4D');
-define('NONCE_SALT',       'a-qlPZ5Nal-5c;&5fuV1f!PJ4qj!?$.BGv,V.bWZI@n*6/Me|KbQYT{M<^3[:_L3');
-```
-
+with the one the strong line [factory] TODO link this makes for you
 ## Caddy Config
 ```bash
 your.domain {
