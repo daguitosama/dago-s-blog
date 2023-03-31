@@ -92,13 +92,6 @@ Terminan en un punto aunque no se pone: **web.labdns.cu.**
 - **Caching-only** (locales o caché): Funcionan con el mismo software, pero no es un servidor de autoridad. Cuando se les realiza una consulta, estos a su vez consultan a otros servidores DNS, almacenando la respuesta en su base de datos para atender peticiones en el futuro.
 - **Forwarding** (de reenvío). Reenvía las peticiones a una lista de servidores de nombres.
 
-### TIPOS DE REGISTROS
-- **A** = Address – (dirección) Este registro se usa para traducir nombres de servidores de alojamiento a direcciones IPv4.
-- **CNAME** = Canonical Name – (nombre canónico) Se usa para crear nombres de servidores de alojamiento adicionales, o alias, para los servidores de alojamiento de un dominio. Es usado cuando se están corriendo múltiples servicios (como FTP y WWW) en un mismo equipo con una sola dirección IP
-- **PTR** = Pointer – (indicador) También conocido como 'registro inverso', funciona a la inversa del registro A, traduciendo IPs en nombres de dominio. Se usa en el archivo de configuración de la zona DNS inversa.
-- **SOA** = Start of authority – (Autoridad de la zona) Proporciona información sobre el servidor DNS primario de la zona. Indica que este servidor DNS es la mejor fuente de información para los datos del dominio.
-- **NS** = Name Server – (Servidor de Nombres) Define la asociación que existe entre un nombre de dominio y los servidores de nombres que almacenan la información de dicho dominio. Cada dominio se puede asociar a una cantidad cualquiera de servidores de nombres.
-- **MX** = Mail Exchange – (registro de intercambio de correo) Asocia un nombre de dominio a una lista de servidores de intercambio de correo para ese dominio. Tiene un balanceo de carga y prioridad para el uso de uno o más servicios de correo.
 
 ### BIND (BERKELEY INTERNET NAME DOMAIN)
 BIND es el servidor de DNS más comúnmente usado en Internet, especialmente en sistemas Unix, en los cuales es un Estándar de facto.
@@ -109,3 +102,46 @@ El servidor DNS BIND admite tres modos de funcionamiento:
 - Servidor de Reenvío DNS
 
 `named.conf` es el archivo de configuración principal de BIND.
+`named.conf.local` es la especificación particular de este servidor DNS
+
+### FORMATO DE UN REGISTRO
+`[nombre] [ttl] IN <tipo de registro> <valor>`
+`cloudflare.com.		377	IN	A	104.16.132.229`
+
+
+### TIPOS DE REGISTROS
+- **A** = Address – (dirección) Este registro se usa para traducir nombres de servidores de alojamiento a direcciones IPv4.
+- **CNAME** = Canonical Name – (nombre canónico) Se usa para crear nombres de servidores de alojamiento adicionales, o alias, para los servidores de alojamiento de un dominio. Es usado cuando se están corriendo múltiples servicios (como FTP y WWW) en un mismo equipo con una sola dirección IP
+- **PTR** = Pointer – (indicador) También conocido como 'registro inverso', funciona a la inversa del registro A, traduciendo IPs en nombres de dominio. Se usa en el archivo de configuración de la zona DNS inversa.
+- **SOA** = Start of authority – (Autoridad de la zona) Proporciona información sobre el servidor DNS primario de la zona. Indica que este servidor DNS es la mejor fuente de información para los datos del dominio.
+- **NS** = Name Server – (Servidor de Nombres) Define la asociación que existe entre un nombre de dominio y los servidores de nombres que almacenan la información de dicho dominio. Cada dominio se puede asociar a una cantidad cualquiera de servidores de nombres.
+- **MX** = Mail Exchange – (registro de intercambio de correo) Asocia un nombre de dominio a una lista de servidores de intercambio de correo para ese dominio. Tiene un balanceo de carga y prioridad para el uso de uno o más servicios de correo.
+
+
+## DHCP
+Protocolo que permite a dispositivos individuales en una red de direcciones IP obtener su propia información de configuración de red (dirección IP; máscara de sub-red, puerta de enlace, etc.) a partir de un servidor DHCP.
+- Al cliente DHCP (ordenador, impresora, etc.) se le asigna una dirección IP cuando contacta por primera vez con el DHCP Server. La IP es asignada de forma aleatoria.
+- El servidor DHCP asigna una dirección IP a un cliente de forma temporal (por un espacio de tiempo).
+- **ÁMBITO (SCOPE)** es un intervalo de direcciones IP válidas disponibles para ser concedidas o asignadas a equipos cliente de una subred determinada.
+
+### Archivo de configuración
+`/etc/dhcpd.conf`
+Ejemplo
+```sh
+  subnet 192.168.1.0 netmask 255.255.255.0 { 
+    option routers 192.168.1.1;
+    option subnet-mask 255.255.255.0; option domain-name "midominio";
+    range 192.168.1.2 192.168.1.50; default-lease-time 21600; max-lease-time 43200;
+    option domain-name-server 192.168.1.1;
+  }
+```
+
+### Tipos de mensaje
+- Discover
+- Offer
+- Confirmation
+
+
+## HTTP
+### Apache
+Config files: `/etc/apache2/httpd.conf`, `/etc/apache2/sites-available`, `/etc/apache2/sites-enabled `
